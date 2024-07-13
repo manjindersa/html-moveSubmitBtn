@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        #btn {
+            margin: 10px;
+            padding: 5px 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Date in JS</h1>
+    <div>
+        <input type="text" name="" id="txt">
+    </div>
+
+    <button onclick="chk()" onmouseover="checkk(document.getElementById('txt').value)" id="btn"> Submit </button>
+
+    <script>
+        let txt = document.getElementById('txt');
+        let btn = document.getElementById('btn');
+
+        function checkk(a) {
+            if (a == "msa") {
+                btn.style.transform = "translateX(0)";
+                btn.style.color = "green";
+            } else {
+                btn.style.color = "red";
+                if (btn.style.transform == "translateX(16em)") {
+                    btn.style.transform = "translateX(-16em)";
+                }
+                else {
+                    btn.style.transform = "translateX(16em)";
+                }
+            }
+        }
+
+        function chk() {
+            alert("Button Pressed");
+        }
+
+    </script>
+</body>
+
+</html>
